@@ -21,7 +21,7 @@
 - Support Vue3, Vue2
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/hunghg255/rsbuild-plugin-vue-inspector/main/assets/demo.gif" alt="rsbuild-plugin-vue-inspector">
+<img src="https://raw.githubusercontent.com/hunghg255/rsbuild-plugin-vue-inspector/main/assets/d%E1%BA%B9mo.gif" alt="rsbuild-plugin-vue-inspector">
 </p>
 
 ## 📦 Installation
