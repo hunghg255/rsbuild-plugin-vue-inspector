@@ -1,6 +1,6 @@
 {
   "name": "rsbuild-plugin-vue-inspector",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "📦 📦 rsbuild plugin vue inspector",
   "scripts": {
     "build": "tsup && cp -r ./src/core ./dist && cp -r ./src/client ./dist",
