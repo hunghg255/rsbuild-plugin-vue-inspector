@@ -1,0 +1,79 @@
+{
+  "name": "rsbuild-plugin-vue-inspector",
+  "version": "0.0.0",
+  "description": "📦 📦 rsbuild plugin vue inspector",
+  "scripts": {
+    "build": "tsup && cp -r ./src/core ./dist && cp -r ./src/client ./dist",
+    "dev": "tsup --watch src",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "play": "npm -C playground run dev",
+    "prepublishOnly": "npm run build",
+    "release": "bumpp -r && npm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist",
+    "src/client/load.js",
+    "src/core/applyInspector.js"
+  ],
+  "keywords": [
+    "rsbuild",
+    "plugin",
+    "print"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@rsbuild/core": "^0.3.11",
+    "@types/node": "^20.10.6",
+    "bumpp": "^9.2.1",
+    "eslint": "^8.56.0",
+    "eslint-config-relaxed-ts": "^2.0.34",
+    "esno": "^0.17.0",
+    "prettier": "^3.1.1",
+    "tsup": "^7.3.0",
+    "typescript": "^5.3.3",
+    "vitest": "^0.34.6"
+  },
+  "engines": {
+    "node": ">=14",
+    "@rsbuild/core": ">=0.2.13"
+  },
+  "dependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/plugin-proposal-decorators": "^7.23.9",
+    "@babel/plugin-syntax-import-attributes": "^7.23.3",
+    "@babel/plugin-syntax-import-meta": "^7.10.4",
+    "@babel/plugin-transform-typescript": "^7.23.6",
+    "@babel/preset-env": "^7.23.7",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@nozomuikuta/h3-cors": "^0.2.2",
+    "@rsbuild/shared": "^0.0.17",
+    "@vue/babel-plugin-jsx": "^1.2.1",
+    "@vue/compiler-dom": "^3.4.15",
+    "h3": "^1.9.0",
+    "launch-editor-middleware": "^2.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hunghg255/rsbuild-plugin-vue-inspector"
+  },
+  "bugs": {
+    "url": "https://github.com/hunghg255/rsbuild-plugin-vue-inspector/issues"
+  },
+  "homepage": "https://github.com/hunghg255/rsbuild-plugin-vue-inspector#readme"
+}

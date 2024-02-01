@@ -1,0 +1,20 @@
+{
+  "name": "playground",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "rsbuild dev --open",
+    "build": "rsbuild build",
+    "preview": "rsbuild preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^0.3.11",
+    "@rsbuild/plugin-babel": "^0.3.11",
+    "@rsbuild/plugin-vue": "^0.3.11",
+    "@rsbuild/plugin-vue-jsx": "^0.3.11",
+    "typescript": "^5.3.0"
+  }
+}
