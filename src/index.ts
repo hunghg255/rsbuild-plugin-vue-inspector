@@ -2,9 +2,9 @@ import type { RsbuildPlugin } from '@rsbuild/core';
 
 import { resolvePackage, setConfig } from '@rsbuild/shared';
 import { startServer } from './server/server';
+import { getRandomPort } from 'get-port-please';
 
 export const pluginVueInspector = (options?: {
-  port?: number;
   position?: {
     left?: string;
     right?: string;
@@ -12,7 +12,6 @@ export const pluginVueInspector = (options?: {
     top?: string;
   };
 }): RsbuildPlugin => {
-  const port = options?.port || 3070;
   const position = {
     left: options?.position?.left || 'auto',
     right: options?.position?.right || '15px',
@@ -22,13 +21,15 @@ export const pluginVueInspector = (options?: {
 
   return {
     name: 'rsbuild-plugin-vue-inspector',
-    setup(api) {
+    async setup(api) {
       if (
         api.context.bundlerType === 'webpack' ||
         process.env.NODE_ENV !== 'development'
       ) {
         return;
       }
+
+      const port = await getRandomPort();
 
       api.modifyRsbuildConfig((config) => {
         const tags: any = config?.html?.tags || [];

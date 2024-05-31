@@ -8,13 +8,13 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
-    "vue": "^3.3.4"
+    "vue": "^3.4.27"
   },
   "devDependencies": {
-    "@rsbuild/core": "^0.3.11",
-    "@rsbuild/plugin-babel": "^0.3.11",
-    "@rsbuild/plugin-vue": "^0.3.11",
-    "@rsbuild/plugin-vue-jsx": "^0.3.11",
-    "typescript": "^5.3.0"
+    "@rsbuild/core": "^0.7.1",
+    "@rsbuild/plugin-babel": "^0.7.1",
+    "@rsbuild/plugin-vue": "^0.7.1",
+    "@rsbuild/plugin-vue-jsx": "^0.7.1",
+    "typescript": "^5.4.5"
   }
 }
